@@ -18,7 +18,7 @@
         android:src="@drawable/ic_headset"/>
 
     <TextView
-        android:id="@+id/txt_judulLagu"
+        android:id="@+id/judulLagu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

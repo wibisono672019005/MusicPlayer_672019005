@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             //Panggil Recycler View
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            recyclerView.setAdapter();
+            recyclerView.setAdapter(new MyAdapter(musicList, getApplicationContext()));
         }
     }
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
             Toast.makeText(MainActivity.this, "Read Permission is Required...", Toast.LENGTH_SHORT).show();
         } else {
-            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 123);
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 2303);
         }
 
     }
