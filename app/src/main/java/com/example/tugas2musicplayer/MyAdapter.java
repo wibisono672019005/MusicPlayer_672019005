@@ -2,6 +2,7 @@ package com.example.tugas2musicplayer;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     ArrayList<ModelAudio> musicList;
     Context context;
+    int x = 1;
 
     public MyAdapter(ArrayList<ModelAudio> musicList, Context context) {
         this.musicList = musicList;
@@ -38,6 +40,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         //Bind semua data music list kepada View/tampilan
         ModelAudio musicData = musicList.get(position);
         holder.titleTextView.setText(musicData.getTitle());
+        holder.artistTextView.setText(musicData.getArtist());
+
+        if(MyMediaPlayer.currentIndex == position) {
+            holder.titleTextView.setTextColor(Color.parseColor("#455ffa"));
+            holder.iconImageView.setImageResource(R.drawable.ic_logo);
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,13 +70,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView titleTextView;
+        TextView titleTextView, artistTextView;
         ImageView iconImageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             titleTextView = itemView.findViewById(R.id.judulLagu);
+            artistTextView = itemView.findViewById(R.id.artistLagu);
             iconImageView = itemView.findViewById(R.id.iconLagu);
         }
     }

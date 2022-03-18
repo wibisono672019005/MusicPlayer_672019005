@@ -2,33 +2,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/purple_200"
-    android:layout_marginTop="5dp"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:paddingTop="10dp"
-    android:paddingBottom="10dp"
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/iconLagu"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_headset"/>
+        android:src="@drawable/ic_logo_hitamputih" />
 
     <TextView
         android:id="@+id/judulLagu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
         android:layout_toEndOf="@id/iconLagu"
         android:ellipsize="end"
-        android:maxLines="1"
-        android:padding="10dp"
+        android:fontFamily="@font/gothammedium"
         android:textColor="@color/black"
+        android:maxLines="1"
+        android:textSize="15dp"
+        android:paddingLeft="5dp"
         tools:text="Music" />
 
-
+    <TextView
+        android:id="@+id/artistLagu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iconLagu"
+        android:layout_below="@id/judulLagu"
+        android:fontFamily="@font/gothammedium"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        tools:text="Artist" />
 
 </RelativeLayout>

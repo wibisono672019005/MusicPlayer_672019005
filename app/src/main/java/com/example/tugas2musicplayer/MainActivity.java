@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] projection = {
                 MediaStore.Audio.Media.TITLE,
+                MediaStore.Audio.Media.ARTIST,
                 MediaStore.Audio.Media.DATA,
                 MediaStore.Audio.Media.DURATION
         };
@@ -56,9 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
         Cursor cursorMusicList = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, projection, selection, null, null);
         while (cursorMusicList.moveToNext()) {
-            ModelAudio musicData = new ModelAudio(cursorMusicList.getString(1),
+            //Mengambil Projection DATA
+            ModelAudio musicData = new ModelAudio(cursorMusicList.getString(2),
+                    //Mengambil Projection TITLE
                     cursorMusicList.getString(0),
-                    cursorMusicList.getString(2));
+                    //Mengambil Projection ARTIST
+                    cursorMusicList.getString(1),
+                    //Mengambil Projection DURATION
+                    cursorMusicList.getString(3));
 
             if (new File(musicData.getPath()).exists()) {
                 musicList.add(musicData);
@@ -89,7 +95,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 2303);
         }
-
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (recyclerView != null) {
+            recyclerView.setAdapter(new MyAdapter(musicList, getApplicationContext()));
+        }
+    }
 }
