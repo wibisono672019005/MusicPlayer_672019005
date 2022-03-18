@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/drawable-v24/ic_logo_background.xml" value="0.2203125" />
+        <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/drawable/custom_thumb.xml" value="0.10885416666666667" />
         <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/drawable/ic_pause.xml" value="0.2203125" />
+        <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/drawable/progress_fill.xml" value="0.1125" />
         <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/layout/activity_player.xml" value="0.16" />
         <entry key="..\:/Abi/MusicPlayer_672019005/app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
