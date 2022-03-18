@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PlayerActivity extends AppCompatActivity {
 
-    TextView judulLagu, waktuSekarang, waktuTotal;
+    TextView judulLagu, waktuSekarang, waktuTotal, artistLagu;
     SeekBar mSeekBar;
     ImageView btnPause, btnNext, btnPrevious, logoMusic;
 
@@ -37,6 +37,7 @@ public class PlayerActivity extends AppCompatActivity {
         btnNext = findViewById(R.id.btn_next);
         btnPrevious = findViewById(R.id.btn_previous);
         logoMusic = findViewById(R.id.logoMusic);
+        artistLagu = findViewById(R.id.artistLagu);
 
         judulLagu.setSelected(true);
 
@@ -88,6 +89,7 @@ public class PlayerActivity extends AppCompatActivity {
         musicSekarang = musicList.get(MyMediaPlayer.currentIndex);
 
         judulLagu.setText(musicSekarang.getTitle());
+        artistLagu.setText(musicSekarang.getArtist());
         waktuTotal.setText(convertToMMSS(musicSekarang.getDuration()));
 
         btnPause.setOnClickListener(view -> pauseMusic());

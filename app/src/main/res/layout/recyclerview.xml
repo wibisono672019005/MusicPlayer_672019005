@@ -5,6 +5,7 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:paddingTop="10dp"
+    android:layout_marginTop="5dp"
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
@@ -34,7 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/iconLagu"
         android:layout_below="@id/judulLagu"
-        android:fontFamily="@font/gothammedium"
         android:layout_marginTop="5dp"
         android:paddingLeft="5dp"
         tools:text="Artist" />

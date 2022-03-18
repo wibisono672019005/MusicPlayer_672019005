@@ -1,5 +1,7 @@
 package com.example.tugas2musicplayer;
 
+import android.widget.ImageView;
+
 import java.io.Serializable;
 
 //Serializable digunakan untuk passing atau mengirim ModelAudio ke Activity lainnya
@@ -16,7 +18,6 @@ public class ModelAudio implements Serializable {
 
 
     //Generate Getter and Setter
-
     public String getPath() {
         return path;
     }
