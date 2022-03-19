@@ -12,10 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/headlinesbold"
+        android:fontFamily="@font/kathen"
         android:text="Music Player"
         android:textAlignment="center"
-        android:textColor="#455ffa"
+        android:textColor="#292929"
         android:textSize="40dp" />
 
     <ImageView

@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -82,7 +85,6 @@ public class PlayerActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     void setResourceWithMusic() {
@@ -116,7 +118,7 @@ public class PlayerActivity extends AppCompatActivity {
         if (MyMediaPlayer.currentIndex == musicList.size()-1) {
             return;
         }
-        MyMediaPlayer.currentIndex +=1;
+        MyMediaPlayer.currentIndex += 1;
         mediaPlayer.reset();
         setResourceWithMusic();
     }

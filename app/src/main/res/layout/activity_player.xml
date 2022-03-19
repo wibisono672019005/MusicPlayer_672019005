@@ -43,10 +43,9 @@
     <ImageView
         android:id="@+id/logoMusic"
         android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
         android:layout_above="@+id/play_control"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
         android:src="@drawable/ic_logo" />
 
     <RelativeLayout
@@ -54,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:padding="40dp">
+        android:padding="30dp">
 
         <SeekBar
             android:id="@+id/mSeekBarTime"
@@ -63,35 +62,33 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:progressTint="#455ffa"
-            android:thumbTint="#455ffa"
-            android:layout_marginBottom="10dp" />
+            android:thumbTint="#455ffa" />
 
         <TextView
             android:id="@+id/waktuSekarang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@id/mSeekBarTime"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="10dp"
-            android:text="0:00"
-            android:layout_marginTop="10dp"/>
+            android:text="0:00" />
 
         <TextView
             android:id="@+id/waktuTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_below="@id/mSeekBarTime"
+            android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
-            android:text="0:00"
-            android:layout_marginTop="10dp"/>
+            android:text="0:00" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/waktuTotal"
-            android:padding="20dp">
+            android:padding="40dp">
 
             <ImageView
                 android:id="@+id/btn_previous"
@@ -103,8 +100,8 @@
 
             <ImageView
                 android:id="@+id/btn_pause"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_pause" />
 
